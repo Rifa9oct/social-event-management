@@ -20,7 +20,7 @@ const Navbar = () => {
         </li>
     </>
     return (
-        <div className="navbar mb-10 mt-8 max-w-[1440px] mx-auto">
+        <div className="navbar mb-10 flex-col md:flex-row mt-8 max-w-[1440px] mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -30,7 +30,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-               <img className="h-20" src={logo}/>
+               <img className="h-20 mx-auto md:mx-0" src={logo}/>
             </div>
             
             <div className="navbar-center hidden lg:flex">
@@ -38,7 +38,8 @@ const Navbar = () => {
                     {navLinks}
                 </ul>
             </div>
-            <div className="navbar-end">
+
+            <div className="navbar-end justify-center mt-8 lg:mt-0">
                 <Link to="/login">
                     <button className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Login</button>
                 </Link>

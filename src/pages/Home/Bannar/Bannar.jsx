@@ -6,7 +6,7 @@ const Bannar = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div>
-                            <h1 className="mb-5 text-5xl font-bold text-white">Engagement Events</h1>
+                            <h1 className="mb-5 text-xl md:text-5xl font-bold text-white">Engagement Events</h1>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ const Bannar = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div>
-                            <h1 className="mb-5 text-5xl font-bold text-white">Wedding Events</h1>
+                            <h1 className="mb-5 text-xl md:text-5xl font-bold text-white">Wedding Events</h1>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const Bannar = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div>
-                            <h1 className="mb-5 text-5xl font-bold text-white">Anniversaries Events</h1>
+                            <h1 className="mb-5 text-xl md:text-5xl font-bold text-white">Anniversaries Events</h1>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const Bannar = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div>
-                            <h1 className="mb-5 text-5xl font-bold text-white"> Baby shower Events</h1>
+                            <h1 className="mb-5 text-xl md:text-5xl font-bold text-white"> Baby shower Events</h1>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ const Bannar = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div>
-                            <h1 className="mb-5 text-5xl font-bold text-white">Birthday Events</h1>
+                            <h1 className="mb-5 text-xl md:text-5xl font-bold text-white">Birthday Events</h1>
                         </div>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ const Bannar = () => {
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div>
-                            <h1 className="mb-5 text-5xl font-bold text-white">Retirement Events</h1>
+                            <h1 className="mb-5 text-xl md:text-5xl font-bold text-white">Retirement Events</h1>
                         </div>
                     </div>
                 </div>

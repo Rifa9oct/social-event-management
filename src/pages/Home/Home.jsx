@@ -1,14 +1,12 @@
 import Bannar from "./Bannar/Bannar";
-import ClintReview from "./ClintReview/ClintReview";
+import ClientReview from "./ClintReview/ClinetReview";
 
 const Home = () => {
-
     return (
         <div>
             <Bannar></Bannar>
-            <ClintReview></ClintReview>
+            <ClientReview></ClientReview>
         </div>
-       
     );
 };
 
