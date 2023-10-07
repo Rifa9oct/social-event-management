@@ -20,7 +20,7 @@ const Register = () => {
         <div>
             <div className="my-32">
                 <div className="relative">
-                    <FcBusinessman className="absolute top-[-55px] left-[670px] text-8xl p-2 bg-green-200 border rounded-full"></FcBusinessman>
+                    <FcBusinessman className="absolute top-[-55px] left-[685px] text-8xl p-2 bg-green-200 border rounded-full"></FcBusinessman>
                 </div>
                 <form onSubmit={handleRegister} className="shadow-xl  w-[400px] mx-auto outline p-6 outline-green-500 rounded-lg">
                     <div className="form-control">

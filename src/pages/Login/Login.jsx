@@ -17,7 +17,7 @@ const Login = () => {
     return (
         <div className="my-32">
             <div className="relative">
-                <FcBusinessman className="absolute top-[-55px] lg:left-[670px] text-8xl p-2 bg-blue-200 border rounded-full"></FcBusinessman>
+                <FcBusinessman className="absolute top-[-55px] lg:left-[685px] text-8xl p-2 bg-blue-200 border rounded-full"></FcBusinessman>
             </div>
             <form onSubmit={handleLogin} className="shadow-xl  w-[400px] mx-auto outline p-6 outline-blue-500 rounded-lg">
                 <div className="form-control">
