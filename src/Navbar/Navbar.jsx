@@ -3,30 +3,29 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
     const navLinks = <>
         <li> <NavLink to="/" className={({ isActive, isPending }) =>
-            isActive ? "active px-3 py-2 rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Home</NavLink>
+            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Home</NavLink>
         </li>
         <li> <NavLink to="/aboutUs" className={({ isActive, isPending }) =>
-            isActive ? "active px-3 py-2 rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>About Us</NavLink>
+            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>About Us</NavLink>
         </li>
         <li> <NavLink to="/contact" className={({ isActive, isPending }) =>
-            isActive ? "active px-3 py-2 rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Contact</NavLink>
+            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Contact</NavLink>
         </li>
         <li> <NavLink to="/team" className={({ isActive, isPending }) =>
-            isActive ? "active px-3 py-2 rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Our Team</NavLink>
+            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Our Team</NavLink>
         </li>
         <li> <NavLink to="/supports" className={({ isActive, isPending }) =>
-            isActive ? "active px-3 py-2 rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Supports</NavLink>
+            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Supports</NavLink>
         </li>
     </>
     return (
-        <div className="navbar mb-20 mt-8">
+        <div className="navbar mb-10 mt-8">
             <div className="navbar-start">
                 <div className="dropdown">
-                    
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                     </label>
-                    <ul tabIndex={0} className="text-[#706F6F] flex flex-col gap-4 font-semibold dropdown-content mt-3 z-[1] p-3 py-6 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="text-[#706F6F] flex flex-col gap-4 font-semibold dropdown-content mt-3 z-[1] p-6 py-6 shadow bg-base-100 rounded-box w-52">
                         {navLinks}
                     </ul>
                 </div>
