@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import logo from "../assets/logo.png"
 
 const Navbar = () => {
     const navLinks = <>
@@ -29,20 +30,20 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">event management</a>
+               <img className="h-20" src={logo}/>
             </div>
             
             <div className="navbar-center hidden lg:flex">
-                <ul className="text-[#706F6F] flex gap-8 font-semibold">
+                <ul className="text-[#706F6F] text-lg flex gap-8 font-semibold">
                     {navLinks}
                 </ul>
             </div>
             <div className="navbar-end">
                 <Link to="/login">
-                    <button className="btn bg-blue-500 text-white hover:bg-blue-700 font-semibold">Login</button>
+                    <button className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Login</button>
                 </Link>
                 <Link to="/register">
-                    <button className="ml-4 btn bg-green-500 text-white hover:bg-green-700 font-semibold">Register</button>
+                    <button className="ml-4 btn text-base bg-green-500 text-white hover:bg-green-700 font-semibold">Register</button>
                 </Link>
             </div>
 

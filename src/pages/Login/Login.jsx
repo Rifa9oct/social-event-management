@@ -60,7 +60,7 @@ const Login = () => {
 
                 {/* continue with google */}
                 <div className="flex items-center justify-center border-solid border-2 border-blue-200 p-2 rounded-lg font-semibold">
-                    <FcGoogle className="text-2xl mr-4"></FcGoogle>
+                    <FcGoogle className="text-2xl mr-2"></FcGoogle>
                     <p className="text-gray-500">Continue with google</p>
                 </div>
 
