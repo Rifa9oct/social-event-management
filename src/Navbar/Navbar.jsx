@@ -7,7 +7,7 @@ const Navbar = () => {
             isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Home</NavLink>
         </li>
         <li> <NavLink to="/aboutUs" className={({ isActive, isPending }) =>
-            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>About Us</NavLink>
+            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>About</NavLink>
         </li>
         <li> <NavLink to="/contact" className={({ isActive, isPending }) =>
             isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Contact</NavLink>
@@ -20,7 +20,7 @@ const Navbar = () => {
         </li>
     </>
     return (
-        <div className="navbar mb-10 mt-8">
+        <div className="navbar mb-10 mt-8 max-w-[1440px] mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">

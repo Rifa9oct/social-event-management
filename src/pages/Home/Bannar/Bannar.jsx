@@ -2,7 +2,7 @@ const Bannar = () => {
     return (
         <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
-                <div className="hero h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/g9F2CXY/gfhgfjhgf.jpg)' }}>
+                <div className="hero h-[500px]" style={{ backgroundImage: 'url(https://i.ibb.co/g9F2CXY/gfhgfjhgf.jpg)'}}>
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
                         <div>
