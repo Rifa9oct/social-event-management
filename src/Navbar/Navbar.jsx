@@ -16,9 +16,6 @@ const Navbar = () => {
         <li> <NavLink to="/contact" className={({ isActive, isPending }) =>
             isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Contact</NavLink>
         </li>
-        <li> <NavLink to="/team" className={({ isActive, isPending }) =>
-            isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Our Team</NavLink>
-        </li>
         <li> <NavLink to="/supports" className={({ isActive, isPending }) =>
             isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Supports</NavLink>
         </li>
@@ -29,7 +26,7 @@ const Navbar = () => {
             .then(() => {
                 Swal.fire(
                     'Thank you',
-                    'Signout successfully',
+                    'Logout successfully',
                     'success'
                 )
             })
@@ -57,20 +54,27 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="navbar-end justify-center mt-8 lg:mt-0">
+            <div className="navbar-end mt-8 lg:mt-0">
                 {
-                    user ? <>
-                        <div className="flex items-center">
-                            <p className="text-lg font-semibold">{user.displayName}</p>
-                            {
-                                user.photoURL?
-                                <img className="w-[50px] h-[50px] mx-3 rounded-full border-[3px] border-blue-900" src={user.photoURL} /> :
-                                <img className="w-[50px] h-[50px] mx-3 rounded-full border-blue-900" src="https://i.ibb.co/VC1vhmp/user.png"/>
+                    user ?
+                        <>
+                            <div className="flex flex-col items-center">
+                                {
+                                    user.photoURL ? <>
+                                        <img className="mt-6 w-[50px] h-[50px] mx-3 rounded-full border-[3px] border-blue-800" src={user.photoURL} />
+                                        <p className="text-blue-800 font-semibold">{user.displayName}</p>
+                                    </> :
+                                    <>
+                                        <img className="mt-6 w-[50px] h-[50px] mx-3 rounded-full" src="https://i.ibb.co/VC1vhmp/user.png"/>
+                                        <p className="text-black font-semibold">{user.displayName}</p>
+                                    </>
 
-                            } 
-                        </div>
-                        <a onClick={handleLogOut} className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Logout</a>
-                    </> :
+                                }
+                            </div>
+                            <div>
+                                <a onClick={handleLogOut} className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Logout</a>
+                            </div>
+                        </> :
                         <Link to="/login">
                             <button className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Login</button>
                         </Link>
@@ -80,7 +84,6 @@ const Navbar = () => {
                     <button className="ml-4 btn text-base bg-green-500 text-white hover:bg-green-700 font-semibold">Register</button>
                 </Link>
             </div>
-
         </div>
     );
 };

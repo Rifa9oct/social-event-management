@@ -1,13 +1,13 @@
-import { FcBusinessman, FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import line from "../../assets/line.png"
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
+import { FcBusinessman } from 'react-icons/fc';
+import Swal from 'sweetalert2';
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const { createUser } = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = e => {
@@ -17,18 +17,37 @@ const Register = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
         const accepted = e.target.terms.checked;
-        console.log(name, email, password, accepted,photoUrl)
 
-        createUser(email,password)
-        .then(result =>{
-            console.log(result.user);
-            updateProfile(result.user,{
-                displayName: name,
-                photoURL: photoUrl
+        //password verification
+        if (password.length < 6) {
+            Swal.fire("Opps!","Password should be at least 6 characters or longer","error");
+            return;
+        }
+        else if (!/[A-Z]/.test(password)) {
+
+            Swal.fire("Opps!","Your password should have at least an uppercase character","error");
+            return;
+        }
+        else if(!/[^\w]/.test(password)){
+            Swal.fire("Opps!","Your password should have at least a special character", "error");
+            return;
+        }
+        else if(!accepted){
+            Swal.fire("Opps!","Your should have accepted our terms and condition", "error");
+            return;
+        }
+
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                Swal.fire("Good job","Registration successfull","success");
+                updateProfile(result.user, {
+                    displayName: name,
+                    photoURL: photoUrl
+                })
+                e.target.reset();
             })
-            e.target.reset();
-        })
-        .catch(error => console.error(error));
+            .catch(error => console.error(error));
     }
 
     return (
@@ -48,7 +67,7 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input type="text" name="photo" placeholder="photo url" className="input input-bordered"/>
+                        <input type="text" name="photo" placeholder="photo url" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -80,19 +99,6 @@ const Register = () => {
 
                     <div className="form-control mt-6">
                         <button className="text-lg btn bg-green-500 hover:bg-green-700 text-white font-semibold">Register</button>
-                    </div>
-
-                    {/* or */}
-                    <div className="flex items-center my-3 justify-center">
-                        <img src={line} />
-                        <p className="font-medium px-2 py-1 rounded-lg border-[3px] border-gray-400">OR</p>
-                        <img src={line} />
-                    </div>
-
-                    {/* continue with google */}
-                    <div className="flex items-center justify-center border-solid border-2 border-green-200 p-2 rounded-lg font-semibold">
-                        <FcGoogle className="text-2xl mr-2"></FcGoogle>
-                        <p className="text-gray-500">Continue with google</p>
                     </div>
 
                     <p className="mt-4 text-center">Already have an account? Please <Link className="text-green-500 font-bold underline" to="/login">Login</Link></p>
