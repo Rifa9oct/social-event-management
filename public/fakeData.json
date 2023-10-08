@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "name": "Engagement Parties",
+      "img": "https://i.ibb.co/1smT9QJ/engagement.jpg",
+      "price": "$2,500",     
+      "description": "An elegant engagement event to celebrate love and commitment."
+    },
+    {
+      "id": 2,
+      "name": "Wedding Ceremony",
+      "img": "https://i.ibb.co/7RBgKLP/weadding.jpg",
+      "price": "$15,000",
+      "description": "A memorable wedding ceremony filled with love and joy."
+    },
+    {
+      "id": 3,
+      "name": "Anniversary Celebration",
+      "img": "https://i.ibb.co/QNPt9Gy/anniversary.jpg",
+      "price": "$1,200",
+      "description": "A special anniversary celebration to commemorate love and togetherness."
+    },
+    {
+      "id": 4,
+      "name": "Baby Shower Party",
+      "img": "https://i.ibb.co/SmJ256D/baby-shower.jpg",
+      "price": "$800",
+      "description": "A joyous baby shower party to welcome a new arrival."
+    },
+    {
+      "id": 5,
+      "name": "Birthday Celebration",
+      "img": "https://i.ibb.co/m9Lr9sZ/birthday.jpg",
+      "price": "$1,000",
+      "description": "A lively 30th birthday celebration with friends, music, and fun surprises."
+    },
+    {
+      "id": 6,
+      "name": "Retirement Farewell",
+      "img": "https://i.ibb.co/nLpH5ZV/retairement.jpg",
+      "price": "$1,500",
+      "description": "A heartfelt retirement farewell gathering to honor years of dedication and hard work."
+    }
+  ]
+  
