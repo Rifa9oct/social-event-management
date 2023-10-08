@@ -3,25 +3,26 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import line from "../../assets/line.png"
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
+import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const {signinUser} = useContext(AuthContext);
+    const { signinUser } = useContext(AuthContext);
 
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        console.log(email, password)
-
         signinUser(email, password)
-            .then(result => {
-                console.log(result.user);
+            .then(() => {
+                Swal.fire("Good job", "Login successfull", "success");
                 e.target.reset();
             })
-            .catch(error => console.error(error));
-
+            .catch(error => {
+                Swal.fire("Login Error",error.message,"error")
+                console.log(error);
+            })
     }
 
     return (
@@ -66,7 +67,6 @@ const Login = () => {
                     <p className="font-medium px-2 py-1 rounded-lg border-[3px] border-gray-400">OR</p>
                     <img src={line} />
                 </div>
-
 
                 {/* continue with google */}
                 <div className="flex items-center justify-center border-solid border-2 border-blue-200 p-2 rounded-lg font-semibold">

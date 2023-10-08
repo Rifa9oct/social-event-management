@@ -40,14 +40,16 @@ const Register = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user);
-                Swal.fire("Good job","Registration successfull","success");
+                Swal.fire("Great!","Registration successfull","success");
                 updateProfile(result.user, {
                     displayName: name,
                     photoURL: photoUrl
                 })
                 e.target.reset();
             })
-            .catch(error => console.error(error));
+            .catch(error => {
+                Swal.fire("Opps!",error.message,"error");
+            })
     }
 
     return (
