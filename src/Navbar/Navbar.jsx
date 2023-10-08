@@ -1,7 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png"
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
     const navLinks = <>
         <li> <NavLink to="/" className={({ isActive, isPending }) =>
             isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Home</NavLink>
@@ -19,6 +23,20 @@ const Navbar = () => {
             isActive ? "active rounded-lg  text-red-600 underline underline-offset-4 font-semibold" : isPending ? "pending" : ""}>Supports</NavLink>
         </li>
     </>
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire(
+                    'Thank you',
+                    'Signout successfully',
+                    'success'
+                )
+            })
+            .catch(error => console.error(error))
+    }
+
+
     return (
         <div className="navbar mb-10 flex-col md:flex-row mt-8 max-w-[1440px] mx-auto">
             <div className="navbar-start">
@@ -30,9 +48,9 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                 </div>
-               <img className="h-20 mx-auto md:mx-0" src={logo}/>
+                <img className="h-20 mx-auto md:mx-0" src={logo} />
             </div>
-            
+
             <div className="navbar-center hidden lg:flex">
                 <ul className="text-[#706F6F] text-lg flex gap-8 font-semibold">
                     {navLinks}
@@ -40,9 +58,24 @@ const Navbar = () => {
             </div>
 
             <div className="navbar-end justify-center mt-8 lg:mt-0">
-                <Link to="/login">
-                    <button className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Login</button>
-                </Link>
+                {
+                    user ? <>
+                        <div className="flex items-center">
+                            <p className="text-lg font-semibold">{user.displayName}</p>
+                            {
+                                user.photoURL?
+                                <img className="w-[50px] h-[50px] mx-3 rounded-full border-[3px] border-blue-900" src={user.photoURL} /> :
+                                <img className="w-[50px] h-[50px] mx-3 rounded-full border-blue-900" src="https://i.ibb.co/VC1vhmp/user.png"/>
+
+                            } 
+                        </div>
+                        <a onClick={handleLogOut} className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Logout</a>
+                    </> :
+                        <Link to="/login">
+                            <button className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Login</button>
+                        </Link>
+                }
+
                 <Link to="/register">
                     <button className="ml-4 btn text-base bg-green-500 text-white hover:bg-green-700 font-semibold">Register</button>
                 </Link>

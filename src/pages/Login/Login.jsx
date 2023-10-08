@@ -2,16 +2,26 @@ import { FcBusinessman, FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import line from "../../assets/line.png"
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const {signinUser} = useContext(AuthContext);
 
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         console.log(email, password)
+
+        signinUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                e.target.reset();
+            })
+            .catch(error => console.error(error));
+
     }
 
     return (
@@ -51,7 +61,7 @@ const Login = () => {
                 </div>
 
                 {/* or */}
-                <div className="flex items-center justify-center">
+                <div className="flex items-center my-3 justify-center">
                     <img src={line} />
                     <p className="font-medium px-2 py-1 rounded-lg border-[3px] border-gray-400">OR</p>
                     <img src={line} />

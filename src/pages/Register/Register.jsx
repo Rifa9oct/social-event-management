@@ -2,18 +2,33 @@ import { FcBusinessman, FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import line from "../../assets/line.png"
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
+    const {createUser} = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
 
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
+        const photoUrl = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const accepted = e.target.terms.checked;
-        console.log(name, email, password, accepted)
+        console.log(name, email, password, accepted,photoUrl)
+
+        createUser(email,password)
+        .then(result =>{
+            console.log(result.user);
+            updateProfile(result.user,{
+                displayName: name,
+                photoURL: photoUrl
+            })
+            e.target.reset();
+        })
+        .catch(error => console.error(error));
     }
 
     return (
@@ -28,6 +43,12 @@ const Register = () => {
                             <span className="label-text">Name</span>
                         </label>
                         <input type="text" name="name" placeholder="Youe name" className="input input-bordered" required />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Photo URL</span>
+                        </label>
+                        <input type="text" name="photo" placeholder="photo url" className="input input-bordered"/>
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -62,7 +83,7 @@ const Register = () => {
                     </div>
 
                     {/* or */}
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center my-3 justify-center">
                         <img src={line} />
                         <p className="font-medium px-2 py-1 rounded-lg border-[3px] border-gray-400">OR</p>
                         <img src={line} />
