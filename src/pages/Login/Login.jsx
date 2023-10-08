@@ -8,7 +8,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
-    const { signinUser } = useContext(AuthContext);
+    const { signinUser,setLogin} = useContext(AuthContext);
 
     const handleLogin = e => {
         e.preventDefault();
@@ -17,10 +17,11 @@ const Login = () => {
         signinUser(email, password)
             .then(() => {
                 Swal.fire("Good job", "Login successfull", "success");
+                setLogin(true);
                 e.target.reset();
             })
             .catch(error => {
-                Swal.fire("Login Error",error.message,"error")
+                Swal.fire("Login Error", error.message, "error")
                 console.log(error);
             })
     }
@@ -28,7 +29,7 @@ const Login = () => {
     return (
         <div className="my-32">
             <div className="relative">
-                <FcBusinessman className="absolute top-[-55px] lg:left-[685px] text-8xl p-2 bg-blue-200 border rounded-full"></FcBusinessman>
+                <FcBusinessman className="absolute top-[-55px] left-[160px] md:left-[330px] lg:left-[685px] text-8xl p-2 bg-blue-200 border rounded-full"></FcBusinessman>
             </div>
             <form onSubmit={handleLogin} className="shadow-xl  w-[400px] mx-auto outline p-6 outline-blue-500 rounded-lg">
                 <div className="form-control">
