@@ -49,6 +49,7 @@ const router = createBrowserRouter([
             },
             {
                 path:"/service/:id",
+                loader:() => fetch('/fakeData.json'),
                 element: <PrivateRoute><ServicePage></ServicePage></PrivateRoute>
             }
         ]

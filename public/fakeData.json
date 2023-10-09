@@ -4,42 +4,49 @@
       "name": "Engagement Party",
       "img": "https://i.ibb.co/1smT9QJ/engagement.jpg",
       "price": "$2,500",     
-      "description": "An elegant engagement event to celebrate love and commitment."
+      "description": "An elegant engagement event to celebrate love and commitment.",
+      "descriptionDetail": "Join us for an enchanting evening under the starry sky as we celebrate the beautiful journey of love between Jane and Michael. This intimate engagement party will be filled with laughter, heartfelt toasts, and moments of pure joy. Our enchanting garden venue will set the stage for a magical night, where you can enjoy delicious gourmet cuisine and dance the night away to live music. Don't miss this opportunity to share in the beginning of their forever love story. Your presence will make this night even more special as they embark on this exciting chapter together."
+
     },
     {
       "id": 2,
       "name": "Wedding Ceremony",
       "img": "https://i.ibb.co/7RBgKLP/weadding.jpg",
       "price": "15,000",
-      "description": "A memorable wedding ceremony filled with love and joy."
+      "description": "A memorable wedding ceremony filled with love and joy.",
+      "descriptionDetail":"Experience the wedding of the year as we celebrate the union of Emily and James. Our grand wedding celebration promises to be an unforgettable experience. The elegant ballroom will be adorned with breathtaking floral arrangements, and the ceremony will be a heartwarming exchange of vows. Following the ceremony, you'll enjoy a sumptuous multi-course meal and dance the night away to the tunes of a live orchestra. This wedding is a testament to love, and your presence will make it even more special."
     },
     {
       "id": 3,
       "name": "Anniversary Celebration",
       "img": "https://i.ibb.co/QNPt9Gy/anniversary.jpg",
       "price": "1,200",
-      "description": "A special anniversary celebration to commemorate love and togetherness."
+      "description": "A special anniversary celebration to commemorate love and togetherness.",
+      "descriptionDetail":"Join us in commemorating 25 years of love and togetherness as we celebrate the silver anniversary of Sarah and David. This anniversary gathering will be a heartwarming tribute to their enduring commitment. Amidst the elegantly decorated venue, you'll witness touching speeches, view a photo exhibition spanning their journey, and savor exquisite cuisine. It's an opportunity to celebrate love and inspire those around us to cherish their own relationships. Your presence at this special event will make it even more meaningful."
     },
     {
       "id": 4,
       "name": "Baby Shower Party",
       "img": "https://i.ibb.co/SmJ256D/baby-shower.jpg",
       "price": "800",
-      "description": "A joyous baby shower party to welcome a new arrival."
+      "description": "A joyous baby shower party to welcome a new arrival.",
+      "descriptionDetail":"Join us in celebrating the upcoming arrival of a bundle of joy! Our baby shower is a moment of pure joy as we shower the expectant parents with love, blessings, and well wishes. The venue will be adorned with cute baby-themed decorations, and there will be games, prizes, and delicious treats. Be prepared for a heartwarming day filled with laughter and joy, as we eagerly await the arrival of the newest member of our family. Your presence is the greatest gift of all at this special celebration."
     },
     {
       "id": 5,
       "name": "Birthday Celebration",
       "img": "https://i.ibb.co/m9Lr9sZ/birthday.jpg",
       "price": "1,000",
-      "description": "A lively 30th birthday celebration with friends, music, and fun surprises."
+      "description": "A lively 30th birthday celebration with friends, music, and fun surprises.",
+      "descriptionDetail":"Get ready for a night of non-stop fun, laughter, and entertainment at our exciting birthday bash! Join us in celebrating Daniel's 30th birthday with an epic party that promises to be unforgettable. The venue will be transformed into a vibrant party zone with dazzling lights and music that will keep you dancing all night. Delicious cuisine, surprise performances, and a lively atmosphere await you. Bring your friends, and let's make this a night to remember as we celebrate Daniel's milestone birthday."
     },
     {
       "id": 6,
       "name": "Retirement Farewell",
       "img": "https://i.ibb.co/nLpH5ZV/retairement.jpg",
       "price": "1,500",
-      "description": "A heartfelt retirement farewell gathering to honor years of dedication and hard work."
+      "description": "A heartfelt retirement farewell gathering to honor years of dedication and hard work.",
+      "descriptionDetail":"Join us in bidding a fond farewell to Mark as he embarks on a new chapter of life called retirement. Mark's dedication and hard work have left an indelible mark on our organization, and it's time to celebrate his well-deserved retirement. This heartfelt gathering will be filled with touching speeches, memories shared, and best wishes for the future. We'll raise a toast to the years of dedication and success. Your presence at this event will make it even more special as we honor Mark's incredible career and wish him the very best in his retirement."
     }
   ]
   
