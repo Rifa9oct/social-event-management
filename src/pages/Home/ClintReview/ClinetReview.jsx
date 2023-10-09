@@ -6,7 +6,7 @@ const ClientReview = () => {
     return (
 
         <div className="max-w-[1440px] mx-auto">
-            <h1 className="text-center text-4xl md:text-5xl mt-16 md:mt-40 mb-16 font-semibold md:font-bold">Our Happy <span className="text-red-600">Clients !</span></h1>
+            <h1 className="text-center text-4xl md:text-5xl mt-16 md:mt-40 mb-16 font-semibold md:font-bold">Happy <span className="text-red-600">Clients !</span></h1>
             <div className="bg-neutral-100 rounded-lg">
                 {/* clint-1 */}
                 <div className="flex flex-col md:flex-row items-center gap-3 mx-auto justify-center md:justify-start">
