@@ -8,7 +8,7 @@ const ServiceDetail = ({ service }) => {
         <div className="card w-[350px] h-[412px]  bg-base-100 shadow-lg mx-auto">
             <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body p-5">
-                <h2 className="card-title text-2xl text-red-600">{name}</h2>
+                <h2 className="card-title text-xl lg:text-2xl text-red-600">{name}</h2>
                 <p className="text-[#706F6F] text-sm">{description}</p>
                 <div className="flex items-center justify-between my-4">
                     <div className="rating rating-sm rating-half">

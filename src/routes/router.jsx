@@ -10,6 +10,7 @@ import Supports from "../pages/Supports/Supports";
 import Service from "../pages/Home/Service/Service";
 import ServiceDetail from "../pages/Home/ServiceDetail/ServiceDetail";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import Advantages from "../pages/Home/Advantages/Advantages";
 
 const router = createBrowserRouter([
     {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
                 path: "/serviceDetail",
                 element:<ServiceDetail></ServiceDetail>
             },
+            {
+                path:"/advantage",
+                element:<Advantages></Advantages>
+            }
         ]
     },
 ])

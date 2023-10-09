@@ -6,7 +6,7 @@ const ClientReview = () => {
     return (
 
         <div>
-            <h1 className="text-center text-4xl md:text-5xl mt-10 md:mt-40 mb-16 font-semibold md:font-bold">Happy <span className="text-red-600">Clients !</span></h1>
+            <h1 className="text-center text-3xl md:text-4xl mt-10 md:mt-40 mb-16 font-semibold md:font-bold">Happy <span className="text-red-600">Clients !</span></h1>
             <div className="bg-neutral-100 py-20">
                 {/* clint-1 */}
                 <div className="flex flex-col md:flex-row items-center gap-3 mx-auto justify-center md:justify-start">
