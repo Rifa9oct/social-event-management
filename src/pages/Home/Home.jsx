@@ -1,5 +1,6 @@
 import Bannar from "./Bannar/Bannar";
 import ClientReview from "./ClintReview/ClinetReview";
+import Footer from "./Footer/Footer";
 import Service from "./Service/Service";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
             <Bannar></Bannar>
             <Service></Service>
             <ClientReview></ClientReview>
+            <Footer></Footer>
         </div>
     );
 };

@@ -5,9 +5,9 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 const ClientReview = () => {
     return (
 
-        <div className="max-w-[1440px] mx-auto">
-            <h1 className="text-center text-4xl md:text-5xl mt-16 md:mt-40 mb-16 font-semibold md:font-bold">Happy <span className="text-red-600">Clients !</span></h1>
-            <div className="bg-neutral-100 rounded-lg">
+        <div>
+            <h1 className="text-center text-4xl md:text-5xl mt-10 md:mt-40 mb-16 font-semibold md:font-bold">Happy <span className="text-red-600">Clients !</span></h1>
+            <div className="bg-neutral-100 py-20">
                 {/* clint-1 */}
                 <div className="flex flex-col md:flex-row items-center gap-3 mx-auto justify-center md:justify-start">
                     <div className="flex flex-col md:flex-row gap-3 items-center">
@@ -26,7 +26,7 @@ const ClientReview = () => {
                 </div>
 
                 {/* clint-2 */}
-                <div className="flex flex-col md:flex-row items-center gap-3 mt-[150px] md:mt-[50px] lg:mt-[-100px] mb-40 mx-auto justify-center md:justify-end">
+                <div className="flex flex-col md:flex-row items-center gap-3 mt-[150px] md:mt-[50px] lg:mt-[-100px] mx-auto justify-center md:justify-end">
                     <div className="relative top-[-240px] md:top-0">
                         <p className="w-[250px] lg:w-[400px] rounded-lg md:rounded-s-lg bg-green-200 h-[150px] lg:h-[250px] border"></p>
                         <img className="absolute left-[25px] top-[-25px] lg:left-[50px] lg:top-[-25px]  w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full" src={clint_2} />
