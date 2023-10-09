@@ -9,6 +9,7 @@ import Register from "../pages/Register/Register";
 import Supports from "../pages/Supports/Supports";
 import Service from "../pages/Home/Service/Service";
 import ServiceDetail from "../pages/Home/ServiceDetail/ServiceDetail";
+import PrivateRoute from "./PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element:<Contact></Contact>
+                element:<PrivateRoute><Contact></Contact></PrivateRoute>
             },
             {
                 path: "/login",
@@ -38,7 +39,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/supports",
-                element:<Supports></Supports>
+                element:<PrivateRoute><Supports></Supports></PrivateRoute>
             },
             {
                 path: "/service",
