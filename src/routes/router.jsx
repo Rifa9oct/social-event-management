@@ -7,6 +7,8 @@ import Contact from "../pages/Contact/Contact";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Supports from "../pages/Supports/Supports";
+import ServiceDetail from "../components/ServiceDetail/ServiceDetail";
+import Service from "../pages/Home/Service/Service";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +21,7 @@ const router = createBrowserRouter([
                 element:<Home></Home>
             },
             {
-                path: "/aboutUs",
+                path: "/about",
                 element:<AboutUs></AboutUs>
             },
             {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
             {
                 path: "/supports",
                 element:<Supports></Supports>
+            },
+            {
+                path: "/service",
+                element:<Service></Service>
+            },
+            {
+                path: "/serviceDetail",
+                element:<ServiceDetail></ServiceDetail>
             },
         ]
     },
