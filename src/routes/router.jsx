@@ -11,6 +11,7 @@ import Service from "../pages/Home/Service/Service";
 import ServiceDetail from "../pages/Home/ServiceDetail/ServiceDetail";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Advantages from "../pages/Home/Advantages/Advantages";
+import ServicePage from "../pages/Home/ServicePage/ServicePage";
 
 const router = createBrowserRouter([
     {
@@ -43,16 +44,12 @@ const router = createBrowserRouter([
                 element:<PrivateRoute><Supports></Supports></PrivateRoute>
             },
             {
-                path: "/service",
-                element:<Service></Service>
-            },
-            {
-                path: "/serviceDetail",
-                element:<ServiceDetail></ServiceDetail>
-            },
-            {
                 path:"/advantage",
                 element:<Advantages></Advantages>
+            },
+            {
+                path:"/service/:id",
+                element: <PrivateRoute><ServicePage></ServicePage></PrivateRoute>
             }
         ]
     },

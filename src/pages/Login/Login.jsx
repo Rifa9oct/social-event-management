@@ -1,7 +1,7 @@
 import { FcBusinessman, FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import line from "../../assets/line.png"
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProvider";
@@ -9,6 +9,8 @@ import { AuthContext } from "../../provider/AuthProvider";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { signinUser, setLogin, signInWithGoogle } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleLogin = e => {
         e.preventDefault();
@@ -18,6 +20,7 @@ const Login = () => {
             .then(() => {
                 Swal.fire("Good job", "Login successfull", "success");
                 setLogin(true);
+                navigate(location?.state? location.state : "/")
                 e.target.reset();
             })
             .catch(error => {
