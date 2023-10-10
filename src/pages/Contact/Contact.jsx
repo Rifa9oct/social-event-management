@@ -3,7 +3,6 @@ import { IoCall } from "react-icons/io5";
 import { MdEmail, MdLocationPin } from "react-icons/md";
 import "./contact.css";
 
-
 const Contact = () => {
 
     return (
@@ -11,14 +10,12 @@ const Contact = () => {
             <h1 className="text-4xl mb-5 font-bold">OUR <span className="text-green-600">CONTACTS</span></h1>
             <p className="mt-2 text-xs">As an experienced Event Management company. we have all kind of Event <br /> equipment, logistics and resources available</p>
 
-            <div className="flex justify-center items-center gap-3 mt-4 font-semibold">
-                <MdLocationPin className="text-2xl text-green-600"></MdLocationPin>
-                <p className="text-md">16, Kemal Ataturk Avenue, Banani, Dhaka, 1213, Bangladesh</p>
-            </div>
-            <div className="flex justify-center items-center gap-10 mb-10">
+            <p className="text-md mt-4"><MdLocationPin className=" inline-block mr-1 text-2xl text-green-600"></MdLocationPin>16, Kemal Ataturk Avenue, Banani, Dhaka, 1213, Bangladesh.</p>
+
+            <div className="flex flex-col md:flex-row justify-center items-center md:gap-10 mb-10">
                 <div className="flex items-center font-semibold gap-2">
                     <IoCall className="text-xl text-green-600"></IoCall>
-                    <p className="text-md">01727710506</p>
+                    <p className="text-md mt-3 md:mt-0">01727710506</p>
                 </div>
                 <div className="flex items-center font-semibold gap-2" >
                     <MdEmail className="text-xl text-green-600"></MdEmail>

@@ -10,7 +10,7 @@ const Advantages = () => {
         <div className="max-w-[1420px] mx-auto">
             <h1 className="text-center text-3xl md:text-4xl mt-32 mb-12 font-semibold md:font-bold">Our<span className="text-red-600"> Advantages</span></h1>
             <div className="flex flex-col lg:flex-row lg:gap-6 items-center justify-between">
-                <div className="flex flex-col justify-center items-center lg:w-[500px] mb-8 lg:mb-0 lg:h-[300px] p-5 ">
+                <div className="flex flex-col justify-center items-center lg:w-[500px] mb-4 lg:mb-0 lg:h-[300px] p-5 ">
                     <img src={img1} />
                     <h1 className="font-bold text-center mt-5 mb-2">INNOVATION</h1>
                     <p className="text-gray-500 text-xs text-center]">Innovation is the driving force behind our progress, inspiring creativity and new ideas to shape the future.</p>

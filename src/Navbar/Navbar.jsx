@@ -61,7 +61,7 @@ const Navbar = () => {
                                 <p className="text-lg font-semibold">{user.displayName}</p>
                                 {
                                     user.photoURL ?
-                                        <img className="w-[50px] h-[50px] mx-3 rounded-full border-[3px] border-blue-900" src={user.photoURL} /> :
+                                        <img className="w-[50px] h-[50px] mx-3 rounded-full border-[2px] border-black" src={user.photoURL} /> :
                                         <img className="w-[50px] h-[50px] mx-3 rounded-full border-blue-900" src="https://i.ibb.co/VC1vhmp/user.png" />
                                 }
                                 <a onClick={handleLogOut} className="btn text-base bg-blue-500 text-white hover:bg-blue-700 font-semibold">Logout</a>

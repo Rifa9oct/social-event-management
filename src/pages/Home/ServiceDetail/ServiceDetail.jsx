@@ -32,7 +32,7 @@ const ServiceDetail = ({ service }) => {
                 </div>
                 <div>
                     <Link to={`/service/${id}`}>
-                        <button  className=" card-actions pt-4 btn font-bold text-red-500 border-2 border-red-600 hover:text-white bg-white hover:bg-red-500 w-full">See Detail</button>
+                        <button  className="btn font-bold text-red-500 border-2 border-red-600 hover:text-white bg-white hover:bg-red-500 w-full">See Detail</button>
                     </Link>
                 </div>
             </div>

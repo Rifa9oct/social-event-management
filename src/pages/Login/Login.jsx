@@ -20,7 +20,7 @@ const Login = () => {
             .then(() => {
                 Swal.fire("Good job", "Login successfull", "success");
                 setLogin(true);
-                navigate(location?.state? location.state : "/")
+                navigate(location?.state ? location.state : "/")
                 e.target.reset();
             })
             .catch(error => {
@@ -33,6 +33,7 @@ const Login = () => {
         signInWithGoogle()
             .then(result => {
                 console.log(result.user)
+                navigate(location?.state ? location.state : "/")
             })
             .catch(error => {
                 console.log(error)
@@ -41,11 +42,7 @@ const Login = () => {
 
     return (
         <div className="my-32">
-            <div className="relative">
-                <FcBusinessman className="absolute top-[-55px] left-[160px] md:left-[330px] lg:left-[685px] text-8xl p-2 bg-blue-200 border rounded-full"></FcBusinessman>
-            </div>
-
-            <div  className="shadow-xl  w-[400px] mx-auto outline p-6 outline-blue-500 rounded-lg">
+            <div className="relative shadow-xl w-[400px] mx-auto outline p-6 outline-blue-500 rounded-lg">
                 <form onSubmit={handleLogin}>
                     <div className="form-control">
                         <label className="label">
@@ -90,6 +87,10 @@ const Login = () => {
                     <button onClick={handleGoogleSignIn} className="text-gray-500">Continue with google</button>
                 </div>
                 <p className="mt-4 text-center">Do not have an account? Please <Link className="text-blue-500 font-bold underline" to="/register">Register</Link></p>
+
+                <div className="absolute top-[-50px] left-[150px]">
+                    <FcBusinessman className="text-8xl p-2 bg-blue-200 border rounded-full"></FcBusinessman>
+                </div>
             </div>
 
         </div>

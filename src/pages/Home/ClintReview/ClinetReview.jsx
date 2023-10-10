@@ -4,7 +4,6 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 
 const ClientReview = () => {
     return (
-
         <div>
             <h1 className="text-center text-3xl md:text-4xl mt-10 md:mt-40 mb-16 font-semibold md:font-bold">Happy <span className="text-red-600">Clients !</span></h1>
             <div className="bg-neutral-100 py-20">
@@ -28,7 +27,7 @@ const ClientReview = () => {
                 </div>
 
                 {/* clint-2 */}
-                <div className="flex flex-col md:flex-row items-center gap-3 mt-[150px] md:mt-[50px] lg:mt-[-100px] mx-auto justify-center md:justify-end" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                <div className="flex flex-col md:flex-row items-center gap-3 mt-[150px] md:mt-[50px] lg:mt-[-100px] mx-auto justify-center md:justify-end" data-aos="fade-up">
                     <div className="relative top-[-240px] md:top-0">
                         <p className="w-[250px] lg:w-[400px] rounded-lg md:rounded-s-lg bg-green-200 h-[150px] lg:h-[250px] border"></p>
                         <img className="absolute left-[25px] top-[-25px] lg:left-[50px] lg:top-[-25px]  w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] rounded-full" src={clint_2} />

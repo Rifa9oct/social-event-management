@@ -54,56 +54,60 @@ const Register = () => {
 
     return (
         <div className="my-32">
-            <div className="relative">
-                <FcBusinessman className="absolute left-[160px] top-[-50px] md:left-[330px]  lg:top-[-55px] lg:left-[685px] text-8xl p-2 bg-green-200 border rounded-full"></FcBusinessman>
+            <div className='relative shadow-xl w-[400px] mx-auto outline p-6 outline-green-500 rounded-lg'>
+                <form onSubmit={handleRegister}>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Name</span>
+                        </label>
+                        <input type="text" name="name" placeholder="Youe name" className="input input-bordered" required />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Photo URL</span>
+                        </label>
+                        <input type="text" name="photo" placeholder="photo url" className="input input-bordered" />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Email</span>
+                        </label>
+                        <input type="email" name="email" placeholder="Your email" className="input input-bordered" required />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Password</span>
+                        </label>
+
+                        <div className="relative">
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                name="password" placeholder="password" className="input input-bordered w-full" required />
+                            <span className="absolute top-4 right-4" onClick={() => setShowPassword(!showPassword)}>
+                                {
+                                    showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
+                                }
+                            </span>
+                        </div>
+
+                        <div className="flex gap-2 mt-4">
+                            <input type="checkbox" name="terms" />
+                            <label htmlFor="terms">Accept our <a href="#">terms and conditions!</a></label>
+                        </div>
+                    </div>
+
+                    <div className="form-control mt-6">
+                        <button className="text-lg btn bg-green-500 hover:bg-green-700 text-white font-semibold">Register</button>
+                    </div>
+
+                    <p className="mt-4 text-center">Already have an account? Please <Link className="text-green-500 font-bold underline" to="/login">Login</Link></p>
+                </form>
+                <div className="absolute top-[-50px] left-[150px]">
+                    <FcBusinessman className="text-8xl p-2 bg-green-200 border rounded-full"></FcBusinessman>
+                </div>
             </div>
-            <form onSubmit={handleRegister} className="shadow-xl  w-[400px] mx-auto outline p-6 outline-green-500 rounded-lg">
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Name</span>
-                    </label>
-                    <input type="text" name="name" placeholder="Youe name" className="input input-bordered" required />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Photo URL</span>
-                    </label>
-                    <input type="text" name="photo" placeholder="photo url" className="input input-bordered" />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Email</span>
-                    </label>
-                    <input type="email" name="email" placeholder="Your email" className="input input-bordered" required />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Password</span>
-                    </label>
 
-                    <div className="relative">
-                        <input
-                            type={showPassword ? "text" : "password"}
-                            name="password" placeholder="password" className="input input-bordered w-full" required />
-                        <span className="absolute top-4 right-4" onClick={() => setShowPassword(!showPassword)}>
-                            {
-                                showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
-                            }
-                        </span>
-                    </div>
 
-                    <div className="flex gap-2 mt-4">
-                        <input type="checkbox" name="terms" />
-                        <label htmlFor="terms">Accept our <a href="#">terms and conditions!</a></label>
-                    </div>
-                </div>
-
-                <div className="form-control mt-6">
-                    <button className="text-lg btn bg-green-500 hover:bg-green-700 text-white font-semibold">Register</button>
-                </div>
-
-                <p className="mt-4 text-center">Already have an account? Please <Link className="text-green-500 font-bold underline" to="/login">Login</Link></p>
-            </form>
         </div>
     );
 };
