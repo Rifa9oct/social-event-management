@@ -14,7 +14,7 @@ const Supports = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-center">
                 {/* member-1 */}
                 <div className="md:w-[600px] rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8 mb-20 mx-auto">
-                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-l-xl h-[50%] md:h-[300px]" src={img1} />
+                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-tr-none md:rounded-l-xl h-[50%] md:h-[300px]" src={img1} />
                     <div className="p-5">
                         <h1 className="text-2xl font-semibold ">Ann Richmond</h1>
                         <h2 className="mt-2 text-orange-300 font-semibold">Manager</h2>
@@ -29,7 +29,7 @@ const Supports = () => {
 
                 {/* member-2 */}
                 <div className="md:w-[600px] rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8 mb-20 mx-auto">
-                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-l-xl h-[50%] md:h-[300px]" src={img3} />
+                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-tr-none md:rounded-l-xl h-[50%] md:h-[300px]" src={img3} />
                     <div className="p-5">
                         <h1 className="text-2xl font-semibold ">Jeffrey Brown</h1>
                         <h2 className="mt-2 text-orange-300 font-semibold">Creative Leader</h2>
@@ -44,7 +44,7 @@ const Supports = () => {
 
                 {/* member-3 */}
                 <div className="md:w-[600px] rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8 mb-20 mx-auto">
-                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-l-xl h-[50%] md:h-[300px]" src={img2} />
+                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-tr-none md:rounded-l-xl h-[50%] md:h-[300px]" src={img2} />
                     <div className="p-5">
                         <h1 className="text-2xl font-semibold ">Roxie Swanson</h1>
                         <h2 className="mt-2 text-orange-300 font-semibold">Sales Manager</h2>
@@ -59,7 +59,7 @@ const Supports = () => {
 
                 {/* member-4 */}
                 <div className="md:w-[600px] rounded-xl shadow-lg flex flex-col md:flex-row items-center gap-8 mb-20 mx-auto">
-                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-l-xl h-[50%] md:h-[300px]" src={img4} />
+                    <img className="w-full md:w-[300px] rounded-t-xl md:rounded-tr-none md:rounded-l-xl h-[50%] md:h-[300px]" src={img4} />
                     <div className="p-5">
                         <h1 className="text-2xl font-semibold ">Alex Grinfield</h1>
                         <h2 className="mt-2 text-orange-300 font-semibold">Event Coordinator</h2>

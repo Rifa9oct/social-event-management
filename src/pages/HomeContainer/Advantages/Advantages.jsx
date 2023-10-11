@@ -4,7 +4,6 @@ import img3 from "../../../assets/Asset 3.png"
 import img4 from "../../../assets/Asset 4.png"
 import img5 from "../../../assets/Asset 5.png"
 
-
 const Advantages = () => {
     return (
         <div className="max-w-[1420px] mx-auto">

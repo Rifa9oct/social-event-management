@@ -2,7 +2,7 @@ import clint_1 from "../../../assets/clint-1.jpg"
 import clint_2 from "../../../assets/clint-2.jpg"
 import { RiDoubleQuotesL } from "react-icons/ri";
 
-const ClientReview = () => {
+const ClinetReview = () => {
     return (
         <div>
             <h1 className="text-center text-3xl md:text-4xl mt-10 md:mt-40 mb-16 font-semibold md:font-bold">Happy <span className="text-red-600">Clients !</span></h1>
@@ -47,4 +47,4 @@ const ClientReview = () => {
     );
 };
 
-export default ClientReview;
+export default ClinetReview;

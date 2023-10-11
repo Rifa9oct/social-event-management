@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
 
-const ServicePage = () => {
+const ServiceDetail = () => {
     const services = useLoaderData();
 
     const { id } = useParams();
@@ -21,4 +21,4 @@ const ServicePage = () => {
     );
 };
 
-export default ServicePage;
+export default ServiceDetail;

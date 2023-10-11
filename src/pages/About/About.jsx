@@ -1,6 +1,6 @@
-import Footer from "../Home/Footer/Footer";
+import Footer from "../HomeContainer/Footer/Footer";
 
-const AboutUs = () => {
+const About = () => {
     return (
         <div>
             <div className="text-justify max-w-[1200px] mx-auto mb-20 p-8">
@@ -22,4 +22,4 @@ const AboutUs = () => {
     );
 };
 
-export default AboutUs;
+export default About;

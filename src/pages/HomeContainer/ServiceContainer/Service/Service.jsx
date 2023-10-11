@@ -1,10 +1,9 @@
 import { BiDollar } from "react-icons/bi";
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";   
 
-const ServiceDetail = ({ service }) => {
+const Service = ({service}) => {
     const { id, name, img, price, description } = service;
-
     return (
         <div className="card w-[350px] h-[412px]  bg-base-100 shadow-lg mx-auto">
             <figure><img src={img} alt="Shoes" /></figure>
@@ -32,17 +31,16 @@ const ServiceDetail = ({ service }) => {
                 </div>
                 <div>
                     <Link to={`/service/${id}`}>
-                        <button  className="btn font-bold text-red-500 border-2 border-red-600 hover:text-white bg-white hover:bg-red-500 w-full">See Detail</button>
+                        <button className="btn font-bold text-red-500 border-2 border-red-600 hover:text-white bg-white hover:bg-red-500 w-full">See Detail</button>
                     </Link>
                 </div>
             </div>
         </div>
-
     );
 };
 
-ServiceDetail.propTypes = {
+Service.propTypes = {
     service: PropTypes.node
 }
 
-export default ServiceDetail;
+export default Service;
